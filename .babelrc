@@ -1,0 +1,20 @@
+{
+  "plugins": [
+    "syntax-dynamic-import",
+    "syntax-object-rest-spread",
+    "transform-object-rest-spread",
+    ["module-resolver", {
+      "alias": {
+        "": "./src"
+      }
+    }]
+  ],
+  "presets": [
+    "react",
+    ["env", {
+      "targets": {
+        "node": 4
+      }
+    }]
+  ]
+}

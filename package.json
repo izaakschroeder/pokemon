@@ -1,0 +1,38 @@
+{
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --config ./config/webpack/client.webpack.config.babel.js"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-module-resolver": "^3.0.0-beta.5",
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "bundle-loader": "^0.5.5",
+    "file-loader": "^0.11.2",
+    "find-nearest-file": "^1.0.0",
+    "nipplejs": "^0.6.7",
+    "p2": "^0.7.1",
+    "pathfinding": "^0.4.18",
+    "pixi.js": "^4.5.5",
+    "purdy": "^3.0.2",
+    "ramda": "^0.24.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-motion": "^0.5.1",
+    "react-pixi": "^0.9.15",
+    "sax": "^1.2.4",
+    "sharp": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.5.5",
+    "webpack-partial": "^2.1.0",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "eslint": "^4.6.0",
+    "eslint-config-metalab": "^7.0.1"
+  }
+}
