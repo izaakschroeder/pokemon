@@ -2,8 +2,10 @@ import {compose, assoc} from 'ramda';
 import nearest from 'find-nearest-file';
 import path from 'path';
 import {NormalModuleReplacementPlugin} from 'webpack';
+// import BabiliPlugin from 'babili-webpack-plugin';
 
 import {output, loader, alias, plugin} from 'webpack-partial';
+import env from 'webpack-config-env';
 
 const context = path.dirname(nearest('package.json'));
 
@@ -17,6 +19,12 @@ const base = ({name, target}) => compose(
     /^\.\/ReactCompositeComponent$/,
     require.resolve('../../../src/react-pixi/ReactCompositeComponent'),
   )),
+  env({
+    NODE_ENV: {required: false},
+  }),
+  // plugin(
+  //   new BabiliPlugin(),
+  // ),
   // ========================================================================
   // Loaders
   // ========================================================================

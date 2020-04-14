@@ -10,6 +10,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "babili-webpack-plugin": "^0.1.2",
     "bundle-loader": "^0.5.5",
     "file-loader": "^0.11.2",
     "find-nearest-file": "^1.0.0",
@@ -27,6 +28,7 @@
     "sharp": "^0.18.2",
     "url-loader": "^0.5.9",
     "webpack": "^3.5.5",
+    "webpack-config-env": "^0.1.0",
     "webpack-partial": "^2.1.0",
     "xml2js": "^0.4.19"
   },

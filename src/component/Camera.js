@@ -28,14 +28,18 @@ export default class Camera extends React.Component {
       (viewport.height / bounds.height),
     );
     const zoom = Math.max(minZoom, baseZoom);
+    const xMin = bounds.left * zoom;
+    const xMax = -bounds.left * zoom;
+    const yMin = bounds.top * zoom;
+    const yMax = -bounds.top * zoom;
     const x = clamp(
-      -bounds.left * zoom - bounds.width * zoom + viewport.width,
-      -bounds.left * zoom,
+      xMin,
+      xMax,
       -target.x * zoom + viewport.width / 2,
     );
     const y = clamp(
-      bounds.top * zoom - bounds.height * zoom + viewport.height,
-      -bounds.top * zoom,
+      yMin,
+      yMax,
       -target.y * zoom  + viewport.height / 2
     );
     return (
@@ -49,6 +53,10 @@ export default class Camera extends React.Component {
         {({x, y, zoom}) => (
           <Container
             scale={[zoom, zoom]}
+            yMin={yMin}
+            yMax={yMax}
+            xMin={xMin}
+            xMax={xMax}
             x={x}
             y={y}
           >
